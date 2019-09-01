@@ -29,7 +29,8 @@ class MyApplication : Application() {
         appDatabase = Room.databaseBuilder(
             applicationContext,
             AppDataBase::class.java, "my-database"
-        ).build()
+        ).fallbackToDestructiveMigration()
+            .build()
 
         userDAO = appDatabase.userDAO()
 

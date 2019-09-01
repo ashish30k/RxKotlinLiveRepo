@@ -10,8 +10,8 @@ data class User(
     @ColumnInfo(name = "email")
     val email:String,
     @ColumnInfo(name = "firstName")
-    val firstName: String,
+    val firstName: String?,
     @ColumnInfo(name = "lastName")
-    val lastName:String
+    val lastName:String?
 )
 

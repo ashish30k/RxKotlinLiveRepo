@@ -11,6 +11,8 @@ class UserListViewModel(val userRepo: UserRepo) {
             .map {
                 Log.d("UserListViewModel", "Mapping user list to UI Model")
                 UserList(it.take(10), "Top 10 users")
+            }.onErrorReturn {
+                UserList(emptyList(), "An Error Occured", it)
             }
 
     }

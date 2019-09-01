@@ -3,7 +3,7 @@ package com.ashish.android.rxkotlinliverepo
 import androidx.room.*
 import io.reactivex.Single
 
-@Database(entities = arrayOf(User::class), version = 1)
+@Database(entities = arrayOf(User::class), version = 3)
 abstract class AppDataBase : RoomDatabase() {
     abstract fun userDAO(): UserDAO
 }
